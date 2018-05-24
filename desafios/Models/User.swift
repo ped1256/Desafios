@@ -7,8 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 struct User {
+    let name: String
+    let email:String
+    let avatar: UIImage?
+    let Challenges: [Challenge]?
+    let score: Float?
+    
+}
+
+struct UserForm {
     let name: String
     let email:String
     let password: String

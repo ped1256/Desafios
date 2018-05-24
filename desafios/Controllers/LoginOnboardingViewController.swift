@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginOnboardingViewController: UIViewController {
     
     var backgroundView: UIView?
     var loginButton: UIButton?
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     func buildBackground() {
         
         self.navigationController?.navigationBar.isHidden = true
-        let backgroundView = BackGroundView(frame: self.view.frame)
+        let backgroundView = BackgroundView(frame: self.view.frame)
         self.view.addSubview(backgroundView)
         self.backgroundView = backgroundView
     }

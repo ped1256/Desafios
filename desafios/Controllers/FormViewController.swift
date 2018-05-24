@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 enum FormType {
     case register
     case login
@@ -175,11 +177,39 @@ class FormViewController: UIViewController {
         actionButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         actionButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
         actionButton.topAnchor.constraint(equalTo: fieldPasswordLabel.bottomAnchor, constant: 30).isActive = true
-        
+        if formType == . login {
+            actionButton.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
+        } else {
+            actionButton.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
+        }   
     }
     
     func userInfo(user: User) {
         dump(user)
+    }
+    
+    @objc func registerAction() {
+        guard let email = self.fieldEmailTextField.text, let password = self.fieldPasswordTextField.text, let name = self.fieldNameTextField.text else { return }
+        
+        let userForm = UserForm(name: name, email: email, password: password)
+        Authenticate.registerUser(user: userForm) { userData in
+            print(userData)
+        }
+    }
+
+    @objc func loginAction() {
+        
+        let userApp = User(name: "Pedro Emanuel", email: "ped1256@hotmail.com", avatar: nil, Challenges: nil, score: 1000)
+        let dashboardViewController = DashBoardViewController()
+        self.present(dashboardViewController, animated: true)
+        
+//        guard let email = self.fieldEmailTextField.text, let password = self.fieldPasswordTextField.text else { return }
+//
+//        Authenticate.loginUser(email: email, password: password) { user in
+//            let userApp = User(name: user.name, email: user.email, avatar: nil, Challenges: nil, score: 1000)
+//            let dashboardViewController = DashBoardViewController()
+//            self.present(dashboardViewController, animated: true)
+//        }
     }
     
     @objc func dismissModal() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController {
+class CameraOnboardingViewController: UIViewController {
 
     var backgroundView: UIView?
     var cameraImageView = UIImageView()
@@ -111,8 +111,8 @@ class OnboardingViewController: UIViewController {
         if UserRequestAuthorizations.userIsAuthenticated() {
             // load home
         } else {
-            let loginViewController = LoginViewController()
-            self.navigationController?.pushViewController(loginViewController, animated: true)
+            let loginOnboardingViewController = LoginOnboardingViewController()
+            self.navigationController?.pushViewController(loginOnboardingViewController, animated: true)
         }
         
     }

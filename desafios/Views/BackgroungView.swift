@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BackGroundView: UIView {
+class BackgroundView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
