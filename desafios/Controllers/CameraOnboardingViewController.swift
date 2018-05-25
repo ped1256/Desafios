@@ -113,7 +113,6 @@ class CameraOnboardingViewController: UIViewController {
             let loginOnboardingViewController = LoginOnboardingViewController()
             self.navigationController?.pushViewController(loginOnboardingViewController, animated: true)
         }
-        
     }
     
     @objc func declineButtonAction(_ sender: Any) {
