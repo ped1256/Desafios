@@ -16,12 +16,14 @@
 		FA26425420A0F987009DC59D /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26425320A0F987009DC59D /* Difficulty.swift */; };
 		FA26425620A0F9F0009DC59D /* ChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26425520A0F9F0009DC59D /* ChallengeType.swift */; };
 		FA53AA1C20A0C70B00C555E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA53AA1B20A0C70B00C555E2 /* GoogleService-Info.plist */; };
+		FA7CBC2420BF08C500EE6365 /* CameraChallengeTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CBC2320BF08C500EE6365 /* CameraChallengeTutorialViewController.swift */; };
 		FABBC44E208A7EDD00225B81 /* FormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBC44D208A7EDD00225B81 /* FormDelegate.swift */; };
 		FABBC452208A831900225B81 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBC451208A831900225B81 /* User.swift */; };
 		FAD0DD3720A0CBA000F2E8AE /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0DD3620A0CBA000F2E8AE /* UserAuthentication.swift */; };
 		FAD8FCB420B740B000C539E0 /* Enums+adictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB320B740B000C539E0 /* Enums+adictions.swift */; };
 		FAD8FCB620B745F400C539E0 /* CameraOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB520B745F400C539E0 /* CameraOnboardingViewController.swift */; };
 		FAD8FCB820B74DE400C539E0 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB720B74DE400C539E0 /* UserInfoView.swift */; };
+		FAD8FCBA20B89C8C00C539E0 /* DashboardChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */; };
 		FAF6730920867E6C002D0FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6730820867E6C002D0FAE /* AppDelegate.swift */; };
 		FAF6730E20867E6C002D0FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF6730C20867E6C002D0FAE /* Main.storyboard */; };
 		FAF6731120867E6C002D0FAE /* desafios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF6730F20867E6C002D0FAE /* desafios.xcdatamodeld */; };
@@ -45,12 +47,14 @@
 		FA26425320A0F987009DC59D /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		FA26425520A0F9F0009DC59D /* ChallengeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeType.swift; sourceTree = "<group>"; };
 		FA53AA1B20A0C70B00C555E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA7CBC2320BF08C500EE6365 /* CameraChallengeTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraChallengeTutorialViewController.swift; sourceTree = "<group>"; };
 		FABBC44D208A7EDD00225B81 /* FormDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDelegate.swift; sourceTree = "<group>"; };
 		FABBC451208A831900225B81 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAD0DD3620A0CBA000F2E8AE /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		FAD8FCB320B740B000C539E0 /* Enums+adictions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums+adictions.swift"; sourceTree = "<group>"; };
 		FAD8FCB520B745F400C539E0 /* CameraOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOnboardingViewController.swift; sourceTree = "<group>"; };
 		FAD8FCB720B74DE400C539E0 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardChallengeView.swift; sourceTree = "<group>"; };
 		FAF6730520867E6C002D0FAE /* desafios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF6730820867E6C002D0FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF6730D20867E6C002D0FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF6732120869268002D0FAE /* LoginOnboardingViewController.swift */,
+				FA7CBC2320BF08C500EE6365 /* CameraChallengeTutorialViewController.swift */,
 				FAF673262086A9DB002D0FAE /* FormViewController.swift */,
 				FAD8FCB520B745F400C539E0 /* CameraOnboardingViewController.swift */,
 				FA1FDA2120A63E2F00CE3B30 /* DashBoardViewController.swift */,
@@ -177,6 +182,7 @@
 			children = (
 				FAF67324208694F8002D0FAE /* BackgroungView.swift */,
 				FAD8FCB720B74DE400C539E0 /* UserInfoView.swift */,
+				FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */,
 				FA1F19962086EEC100F1E106 /* FormView.swift */,
 			);
 			path = Views;
@@ -330,9 +336,11 @@
 				FAD8FCB620B745F400C539E0 /* CameraOnboardingViewController.swift in Sources */,
 				FA1FDA2020A637F400CE3B30 /* ChallengesFlowController.swift in Sources */,
 				FABBC44E208A7EDD00225B81 /* FormDelegate.swift in Sources */,
+				FAD8FCBA20B89C8C00C539E0 /* DashboardChallengeView.swift in Sources */,
 				FABBC452208A831900225B81 /* User.swift in Sources */,
 				FAF67325208694F8002D0FAE /* BackgroungView.swift in Sources */,
 				FAD8FCB820B74DE400C539E0 /* UserInfoView.swift in Sources */,
+				FA7CBC2420BF08C500EE6365 /* CameraChallengeTutorialViewController.swift in Sources */,
 				FA26425020A0F6A0009DC59D /* CaptureChallengeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

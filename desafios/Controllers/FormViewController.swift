@@ -201,6 +201,7 @@ class FormViewController: UIViewController {
         
         let userApp = User(name: "Pedro Emanuel", email: "ped1256@hotmail.com", avatar: nil, Challenges: nil, score: 1000)
         let dashboardViewController = DashBoardViewController()
+        dashboardViewController.user = userApp
         self.present(dashboardViewController, animated: true)
         
 //        guard let email = self.fieldEmailTextField.text, let password = self.fieldPasswordTextField.text else { return }

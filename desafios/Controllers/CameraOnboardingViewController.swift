@@ -107,6 +107,7 @@ class CameraOnboardingViewController: UIViewController {
     
     @objc func confirmButtonAction(_ sender: Any) {
         UserRequestAuthorizations.requestCameraAuthorization()
+        
         if UserRequestAuthorizations.userIsAuthenticated() {
             // load home
         } else {

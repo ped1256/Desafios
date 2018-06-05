@@ -11,25 +11,19 @@ import UIKit
 class DashBoardViewController: UIViewController {
     
     var captureButton = UIButton()
+    let captureChallengeView = DashboardChallengeView()
     let infoView = UserInfoView()
-//    var delegate: ChallengesFlowDelegate
+    var challengeSelected: ChallengeType = .capture
     var user: User?
-    
-//    public convenience init(user: User) {
-//        self.init(user: user)
-//        self.delegate = delegate
-//        self.user = user
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareHomeLayout()
         addUserInfoView()
+        addTitleView()
+        addChallengeViews(type: .capture)
+        
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -43,20 +37,6 @@ class DashBoardViewController: UIViewController {
         self.view.addSubview(backgroundView)
     }
 
-    func addActionsButton(){
-        //capture object challenge button
-        
-    }
-    
-    @objc func actionButton(_ sender: UIButton) {
-        switch sender.tag {
-        case ChallengeType.capture.hashValue:
-            showChallengView(type: .capture)
-        default:
-            return
-        }
-    }
-
     func addUserInfoView() {
         self.view.addSubview(infoView)
         infoView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +48,69 @@ class DashBoardViewController: UIViewController {
             ])
     }
     
-    func showChallengView(type: ChallengeType) {
+    func addTitleView() {
+        let title = UILabel()
+        self.view.addSubview(title)
+        title.text = "Desafios"
+        title.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        title.font = UIFont.systemFont(ofSize: 36, weight: .regular)
+        title.translatesAutoresizingMaskIntoConstraints = false
         
+        NSLayoutConstraint.activate([
+            title.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 18),
+            title.topAnchor.constraint(equalTo: self.infoView.bottomAnchor, constant: 50),
+            title.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -18)
+            ])
+        
+        
+        let subtitle = UILabel()
+        self.view.addSubview(subtitle)
+        subtitle.numberOfLines = 2
+        subtitle.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        subtitle.text = "Complete desafios para aumentar o seu nivel e se destacar entre os jogadores"
+        subtitle.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        subtitle.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            subtitle.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 18),
+            subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 3),
+            subtitle.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -18)
+            ])
+        self.view.addSubview(subtitle)
+        
+    }
+    
+    func addChallengeViews(type: ChallengeType) {
+        switch type {
+        case .capture:
+            self.addCaptureChallengeView()
+        case .questions:
+            return
+        case .faceDetection:
+            return
+        case .pVp:
+            return
+        }
+    }
+    
+    func addCaptureChallengeView() {
+        self.view.addSubview(captureChallengeView)
+        
+        captureChallengeView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            captureChallengeView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 18),
+            captureChallengeView.rightAnchor.constraint(equalTo: self.view.centerXAnchor, constant: -9),
+            captureChallengeView.topAnchor.constraint(equalTo: self.infoView.bottomAnchor, constant: 173),
+            captureChallengeView.heightAnchor.constraint(equalToConstant: 159)
+            ])
+        captureChallengeView.backgroundColor = #colorLiteral(red: 0.8901960784, green: 0.8823529412, blue: 0.3529411765, alpha: 1)
+        captureChallengeView.image = #imageLiteral(resourceName: "smartPhoneCaptureIcon")
+        captureChallengeView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(initChallengeFlow)))
+    }
+    
+    @objc func initChallengeFlow() {
+        let challengesFlowController = ChallengesFlowController()
+        challengesFlowController.presenter = self
+        challengesFlowController.selectChallenge(challengeType: challengeSelected)
     }
 }

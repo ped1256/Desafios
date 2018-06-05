@@ -9,4 +9,17 @@
 import Foundation
 enum Difficulty {
     case easy, normal, hard, extreme
+    
+    var description: String {
+            switch self {
+            case .easy:
+                return "Desafio Iniciante"
+            case .normal:
+                return "Desafio Normal"
+            case .hard:
+                return "Desafio Dificíl"
+            case . extreme:
+                return "Desafio muito Dificíl"
+        }
+    }
 }
