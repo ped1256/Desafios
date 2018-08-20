@@ -41,9 +41,11 @@ class UserInfoView: UIView {
         NSLayoutConstraint.activate([
             imageView.heightAnchor.constraint(equalToConstant: 150),
             imageView.widthAnchor.constraint(equalToConstant: 150),
-            imageView.topAnchor.constraint(equalTo: self.topAnchor),
-            imageView.leftAnchor.constraint(equalTo: self.leftAnchor)
+            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: -30),
+            imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -30)
             ])
+        imageView.layer.cornerRadius = 300 / 4
+        imageView.clipsToBounds = true
         
         if let user = self.user {
             imageView.image = user.avatar

@@ -15,7 +15,7 @@ struct User {
     let avatar: UIImage?
     let Challenges: [Challenge]?
     let score: Float?
-    
+    let level: Level
 }
 
 struct UserForm {

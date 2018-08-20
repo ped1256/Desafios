@@ -155,8 +155,6 @@ class FormViewController: UIViewController {
                     fieldPasswordTextField.topAnchor.constraint(equalTo: fieldPasswordLabel.topAnchor, constant: 0).isActive = true
                 }
                 
-                
-                
                 buildSeparatorLine(for: fieldPasswordLabel)
                 
             }
@@ -192,14 +190,20 @@ class FormViewController: UIViewController {
         guard let email = self.fieldEmailTextField.text, let password = self.fieldPasswordTextField.text, let name = self.fieldNameTextField.text else { return }
         
         let userForm = UserForm(name: name, email: email, password: password)
+        
         Authenticate.registerUser(user: userForm) { userData in
             print(userData)
+            let dashboardViewController = DashBoardViewController()
+            dashboardViewController.user = userData
+            dump((dashboardViewController.user))
+            self.present(dashboardViewController, animated: true)
+            
         }
     }
 
     @objc func loginAction() {
         
-        let userApp = User(name: "Pedro Emanuel", email: "ped1256@hotmail.com", avatar: nil, Challenges: nil, score: 1000)
+        let userApp = User(name: "Pedro Emanuel", email: "ped1256@hotmail.com", avatar: nil, Challenges: nil, score: 1000, level: Level.low)
         let dashboardViewController = DashBoardViewController()
         dashboardViewController.user = userApp
         self.present(dashboardViewController, animated: true)

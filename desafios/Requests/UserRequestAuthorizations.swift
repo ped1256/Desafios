@@ -18,6 +18,10 @@ class UserRequestAuthorizations: NSObject {
     }
     
     static func userIsAuthenticated() -> Bool {
-        return false
+        if AVCaptureDevice.authorizationStatus(for: .video) == AVAuthorizationStatus.authorized{
+            return true
+        } else {
+            return false
+        }
     }
 }

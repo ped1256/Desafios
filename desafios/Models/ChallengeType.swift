@@ -10,3 +10,4 @@ import Foundation
 enum ChallengeType {
     case capture, questions, faceDetection, pVp
 }
+

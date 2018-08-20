@@ -16,6 +16,5 @@ class Challenge: NSObject {
     var challengeImage: UIImage?
     var challengeDificult: Difficulty?
     var challengetype: ChallengeType?
-    
 }
 

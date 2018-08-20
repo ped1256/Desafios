@@ -11,14 +11,13 @@ class CameraOnboardingViewController: UIViewController {
     
     var backgroundView: UIView?
     var cameraImageView = UIImageView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         buildBackground()
         buildCameraImageView()
         buildMessagetextelabel()
         buildConfirmAndDeclinebutton()
-        
     }
     
     func buildBackground(){
@@ -68,7 +67,6 @@ class CameraOnboardingViewController: UIViewController {
         messageLabel.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -59).isActive = true
         messageLabel.topAnchor.constraint(equalTo: self.cameraImageView.bottomAnchor, constant: 50).isActive = true
         
-        
     }
     
     func buildConfirmAndDeclinebutton() {
@@ -88,7 +86,6 @@ class CameraOnboardingViewController: UIViewController {
         confirmButton.widthAnchor.constraint(equalToConstant: width).isActive = true
         confirmButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        
         let declineButton: UIButton = UIButton()
         declineButton.backgroundColor = #colorLiteral(red: 0.3098039216, green: 0.4156862745, blue: 0.5411764706, alpha: 1)
         declineButton.setTitle("Negar", for: .normal)
@@ -107,13 +104,10 @@ class CameraOnboardingViewController: UIViewController {
     
     @objc func confirmButtonAction(_ sender: Any) {
         UserRequestAuthorizations.requestCameraAuthorization()
+        let loginOnboardingViewController = LoginOnboardingViewController()
+        let navi = UINavigationController(rootViewController: loginOnboardingViewController)
         
-        if UserRequestAuthorizations.userIsAuthenticated() {
-            // load home
-        } else {
-            let loginOnboardingViewController = LoginOnboardingViewController()
-            self.navigationController?.pushViewController(loginOnboardingViewController, animated: true)
-        }
+        self.present(navi, animated: true, completion: nil)
     }
     
     @objc func declineButtonAction(_ sender: Any) {

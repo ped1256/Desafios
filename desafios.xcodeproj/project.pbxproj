@@ -15,6 +15,8 @@
 		FA26425220A0F7EC009DC59D /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26425120A0F7EC009DC59D /* Challenge.swift */; };
 		FA26425420A0F987009DC59D /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26425320A0F987009DC59D /* Difficulty.swift */; };
 		FA26425620A0F9F0009DC59D /* ChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA26425520A0F9F0009DC59D /* ChallengeType.swift */; };
+		FA4E84B120D30C1900A9ED3F /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA4E84B020D30C1900A9ED3F /* Inceptionv3.mlmodel */; };
+		FA4E84B320D415A600A9ED3F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E84B220D415A600A9ED3F /* MainController.swift */; };
 		FA53AA1C20A0C70B00C555E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA53AA1B20A0C70B00C555E2 /* GoogleService-Info.plist */; };
 		FA7CBC2420BF08C500EE6365 /* CameraChallengeTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CBC2320BF08C500EE6365 /* CameraChallengeTutorialViewController.swift */; };
 		FABBC44E208A7EDD00225B81 /* FormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBC44D208A7EDD00225B81 /* FormDelegate.swift */; };
@@ -25,7 +27,6 @@
 		FAD8FCB820B74DE400C539E0 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB720B74DE400C539E0 /* UserInfoView.swift */; };
 		FAD8FCBA20B89C8C00C539E0 /* DashboardChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */; };
 		FAF6730920867E6C002D0FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6730820867E6C002D0FAE /* AppDelegate.swift */; };
-		FAF6730E20867E6C002D0FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF6730C20867E6C002D0FAE /* Main.storyboard */; };
 		FAF6731120867E6C002D0FAE /* desafios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF6730F20867E6C002D0FAE /* desafios.xcdatamodeld */; };
 		FAF6731320867E6C002D0FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF6731220867E6C002D0FAE /* Assets.xcassets */; };
 		FAF6731620867E6C002D0FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF6731420867E6C002D0FAE /* LaunchScreen.storyboard */; };
@@ -46,6 +47,8 @@
 		FA26425120A0F7EC009DC59D /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		FA26425320A0F987009DC59D /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		FA26425520A0F9F0009DC59D /* ChallengeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeType.swift; sourceTree = "<group>"; };
+		FA4E84B020D30C1900A9ED3F /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		FA4E84B220D415A600A9ED3F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		FA53AA1B20A0C70B00C555E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA7CBC2320BF08C500EE6365 /* CameraChallengeTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraChallengeTutorialViewController.swift; sourceTree = "<group>"; };
 		FABBC44D208A7EDD00225B81 /* FormDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardChallengeView.swift; sourceTree = "<group>"; };
 		FAF6730520867E6C002D0FAE /* desafios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF6730820867E6C002D0FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAF6730D20867E6C002D0FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAF6731020867E6C002D0FAE /* desafios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = desafios.xcdatamodel; sourceTree = "<group>"; };
 		FAF6731220867E6C002D0FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF6731520867E6C002D0FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		FABBC450208A830600225B81 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA4E84B020D30C1900A9ED3F /* Inceptionv3.mlmodel */,
 				FABBC451208A831900225B81 /* User.swift */,
 				FA26425520A0F9F0009DC59D /* ChallengeType.swift */,
 				FA26425320A0F987009DC59D /* Difficulty.swift */,
@@ -143,7 +146,6 @@
 				FAF6732320869462002D0FAE /* Views */,
 				FAF6731E20868CC7002D0FAE /* Requests */,
 				FAF6731D20868CB0002D0FAE /* Controllers */,
-				FAF6730C20867E6C002D0FAE /* Main.storyboard */,
 				FAF6731220867E6C002D0FAE /* Assets.xcassets */,
 				FAF6731420867E6C002D0FAE /* LaunchScreen.storyboard */,
 				FA53AA1B20A0C70B00C555E2 /* GoogleService-Info.plist */,
@@ -158,6 +160,7 @@
 			children = (
 				FAF6732120869268002D0FAE /* LoginOnboardingViewController.swift */,
 				FA7CBC2320BF08C500EE6365 /* CameraChallengeTutorialViewController.swift */,
+				FA4E84B220D415A600A9ED3F /* MainController.swift */,
 				FAF673262086A9DB002D0FAE /* FormViewController.swift */,
 				FAD8FCB520B745F400C539E0 /* CameraOnboardingViewController.swift */,
 				FA1FDA2120A63E2F00CE3B30 /* DashBoardViewController.swift */,
@@ -252,7 +255,6 @@
 				FAF6731620867E6C002D0FAE /* LaunchScreen.storyboard in Resources */,
 				FA53AA1C20A0C70B00C555E2 /* GoogleService-Info.plist in Resources */,
 				FAF6731320867E6C002D0FAE /* Assets.xcassets in Resources */,
-				FAF6730E20867E6C002D0FAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +334,7 @@
 				FAD8FCB420B740B000C539E0 /* Enums+adictions.swift in Sources */,
 				FA1F19972086EEC100F1E106 /* FormView.swift in Sources */,
 				FA26425620A0F9F0009DC59D /* ChallengeType.swift in Sources */,
+				FA4E84B120D30C1900A9ED3F /* Inceptionv3.mlmodel in Sources */,
 				FAF6731120867E6C002D0FAE /* desafios.xcdatamodeld in Sources */,
 				FAD8FCB620B745F400C539E0 /* CameraOnboardingViewController.swift in Sources */,
 				FA1FDA2020A637F400CE3B30 /* ChallengesFlowController.swift in Sources */,
@@ -342,20 +345,13 @@
 				FAD8FCB820B74DE400C539E0 /* UserInfoView.swift in Sources */,
 				FA7CBC2420BF08C500EE6365 /* CameraChallengeTutorialViewController.swift in Sources */,
 				FA26425020A0F6A0009DC59D /* CaptureChallengeViewController.swift in Sources */,
+				FA4E84B320D415A600A9ED3F /* MainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FAF6730C20867E6C002D0FAE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAF6730D20867E6C002D0FAE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAF6731420867E6C002D0FAE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -22,7 +22,7 @@ class Authenticate: NSObject {
                 name = nameData
             }
             
-            let user = User(name: name, email: email, avatar: nil, Challenges: nil, score: nil)
+            let user = User(name: name, email: email, avatar: nil, Challenges: nil, score: nil, level: Level.low)
             completion(user)
             
         }
@@ -37,7 +37,7 @@ class Authenticate: NSObject {
             if let nameData = response?.displayName {
                 name = nameData
             }
-            let user = User(name: name, email: email, avatar: nil, Challenges: nil, score: nil)
+            let user = User(name: name, email: email, avatar: nil, Challenges: nil, score: nil, level: Level.low)
             completion(user)
         }
     }

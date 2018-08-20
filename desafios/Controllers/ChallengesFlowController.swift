@@ -12,14 +12,18 @@ protocol ChallengesFlowDelegate  {
     func selectChallenge(challengeType: ChallengeType)
 }
 
-class ChallengesFlowController: ChallengesFlowDelegate {
+final class ChallengesFlowController: ChallengesFlowDelegate {
+    
+    init(presenter: UIViewController) {
+        self.presenter = presenter
+    }
     
     var delegate: ChallengesFlowDelegate?
-    var presenter: UIViewController?
+    var presenter: UIViewController
     
     var captureChallengeViewController: CaptureChallengeViewController {
         // create faker user
-        let user = User(name: "Pedro", email: "Pedro.azevedo@peixeurbano", avatar: nil, Challenges: nil, score: 1000)
+//        let user = User(name: "Pedro", email: "Pedro.azevedo@peixeurbano", avatar: nil, Challenges: nil, score: 1000, level: Level.low)
         let captureChallengeViewController = CaptureChallengeViewController()
         
         return captureChallengeViewController
@@ -33,8 +37,7 @@ class ChallengesFlowController: ChallengesFlowDelegate {
         switch challengeType {
         case .capture:
             let navi = UINavigationController(rootViewController: self.captureChallengeViewController)
-            self.presenter?.present(navi, animated: true, completion: nil)
-            
+            self.presenter.present(navi, animated: true, completion: nil)
         default:
             return
         }

@@ -15,10 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        if UserRequestAuthorizations.userIsAuthenticated() {
+            let loginViewController = LoginOnboardingViewController()
+            window!.rootViewController = loginViewController
+        } else {
+            let cameraOnboardingViewController = CameraOnboardingViewController()
+            window!.rootViewController = cameraOnboardingViewController
+        }
+        
+        window!.makeKeyAndVisible()
         FirebaseApp.configure()
-        // Override point for customization after application launch.
+
         return true
     }
 

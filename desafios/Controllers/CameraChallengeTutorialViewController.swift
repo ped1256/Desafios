@@ -10,9 +10,12 @@ import UIKit
 
 class CameraChallengeTutorialViewController: UIViewController {
     var delegate: ChallengesFlowDelegate?
+    var challengeTitle = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = BackgroundView(frame: self.view.frame)
+        self.navigationController?.navigationBar.isHidden = true
     }
+    
 }
