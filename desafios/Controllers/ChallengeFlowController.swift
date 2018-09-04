@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol ChallengesFlowDelegate  {
+protocol ChallengeFlowDelegate  {
     func selectChallenge(challengeType: ChallengeType)
 }
 
-final class ChallengesFlowController: ChallengesFlowDelegate {
+final class ChallengeFlowController: ChallengeFlowDelegate {
     
     init(presenter: UIViewController) {
         self.presenter = presenter
     }
     
-    var delegate: ChallengesFlowDelegate?
+    var delegate: ChallengeFlowDelegate?
     var presenter: UIViewController
     
     var captureChallengeViewController: CaptureChallengeViewController {

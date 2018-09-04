@@ -122,6 +122,14 @@ class CaptureChallengeViewController: UIViewController {
     }
     
     @objc func startChallenge() {
+        // request Test
+        
+        let operation = ChallengeOperationRequest()
+        operation.getAllChallengesFromAPI { challenges in
+            dump("request feito com sucesso")
+            return
+        }
+        
         self.challengeTitle.font = UIFont.systemFont(ofSize: 30)
         self.challengeTitle.text = "Procure por: Copo"
         guard let device = self.device else { return }
@@ -160,6 +168,8 @@ extension CaptureChallengeViewController: AVCaptureVideoDataOutputSampleBufferDe
             
             DispatchQueue.main.async {
                 self.label.text = element.identifier
+                
+                dump(element.identifier)
                 
                 let namesToFind = ["cup"]
                 if namesToFind.contains(element.identifier.lowercased()) {

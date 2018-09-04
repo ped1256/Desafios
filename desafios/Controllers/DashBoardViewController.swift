@@ -109,8 +109,8 @@ class DashBoardViewController: UIViewController {
     }
     
     @objc func initChallengeFlow() {
-        let challengesFlowController = ChallengesFlowController(presenter: self)
-        challengesFlowController.presenter = self
-        challengesFlowController.selectChallenge(challengeType: challengeSelected)
+        let challengeFlowController = ChallengeFlowController(presenter: self)
+        challengeFlowController.presenter = self
+        challengeFlowController.selectChallenge(challengeType: challengeSelected)
     }
 }

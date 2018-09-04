@@ -9,7 +9,7 @@
 import UIKit
 
 class CameraChallengeTutorialViewController: UIViewController {
-    var delegate: ChallengesFlowDelegate?
+    var delegate: ChallengeFlowDelegate?
     var challengeTitle = UILabel()
 
     override func viewDidLoad() {
