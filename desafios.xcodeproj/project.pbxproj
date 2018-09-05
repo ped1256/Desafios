@@ -27,6 +27,7 @@
 		FAD8FCB820B74DE400C539E0 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB720B74DE400C539E0 /* UserInfoView.swift */; };
 		FAD8FCBA20B89C8C00C539E0 /* DashboardChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */; };
 		FADA7C9A212B86ED0022F5A0 /* ChallengesOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA7C99212B86ED0022F5A0 /* ChallengesOperations.swift */; };
+		FAE9F43E213FF59B00D6614F /* BackgroundViewWithAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9F43D213FF59B00D6614F /* BackgroundViewWithAnimate.swift */; };
 		FAF6730920867E6C002D0FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6730820867E6C002D0FAE /* AppDelegate.swift */; };
 		FAF6731120867E6C002D0FAE /* desafios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF6730F20867E6C002D0FAE /* desafios.xcdatamodeld */; };
 		FAF6731320867E6C002D0FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF6731220867E6C002D0FAE /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		FAD8FCB720B74DE400C539E0 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardChallengeView.swift; sourceTree = "<group>"; };
 		FADA7C99212B86ED0022F5A0 /* ChallengesOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesOperations.swift; sourceTree = "<group>"; };
+		FAE9F43D213FF59B00D6614F /* BackgroundViewWithAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewWithAnimate.swift; sourceTree = "<group>"; };
 		FAF6730520867E6C002D0FAE /* desafios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF6730820867E6C002D0FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF6731020867E6C002D0FAE /* desafios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = desafios.xcdatamodel; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				FAF67324208694F8002D0FAE /* BackgroungView.swift */,
 				FAD8FCB720B74DE400C539E0 /* UserInfoView.swift */,
+				FAE9F43D213FF59B00D6614F /* BackgroundViewWithAnimate.swift */,
 				FAD8FCB920B89C8C00C539E0 /* DashboardChallengeView.swift */,
 				FA1F19962086EEC100F1E106 /* FormView.swift */,
 			);
@@ -272,13 +275,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-desafios/Pods-desafios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +352,7 @@
 				FABBC452208A831900225B81 /* User.swift in Sources */,
 				FAF67325208694F8002D0FAE /* BackgroungView.swift in Sources */,
 				FAD8FCB820B74DE400C539E0 /* UserInfoView.swift in Sources */,
+				FAE9F43E213FF59B00D6614F /* BackgroundViewWithAnimate.swift in Sources */,
 				FA7CBC2420BF08C500EE6365 /* CameraChallengeTutorialViewController.swift in Sources */,
 				FA26425020A0F6A0009DC59D /* CaptureChallengeViewController.swift in Sources */,
 				FA4E84B320D415A600A9ED3F /* MainController.swift in Sources */,
@@ -489,10 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WEP9UKL7GT;
 				INFOPLIST_FILE = desafios/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pedro.emanuel.desafios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -508,10 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WEP9UKL7GT;
 				INFOPLIST_FILE = desafios/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pedro.emanuel.desafios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

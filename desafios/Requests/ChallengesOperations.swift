@@ -7,30 +7,19 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseDatabase
 
 class ChallengeOperationRequest : NSObject {
- 
+    var ref: DatabaseReference!
     var challenges: [Challenge]?
     
-    func getAllChallengesFromAPI(completion: @escaping ([Challenge]) -> ()){
+    func getAllChallengesFromAPI(completion: @escaping ([Challenge]) -> ()) {
+        ref = Database.database().reference()
+        
+    }
     
-        let url = URL(string: "https://tilappvaportest.vapor.cloud/api/acronyms")
-        let session = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            
-            guard let data = data, error == nil else {
-                completion([Challenge]())
-                return
-            }
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
-                dump(json)
-                
-            }catch{
-                
-            }
-            
-        }
-        session.resume()
+    func setChallenges(){
+        ref = Database.database().reference()
     }
 }

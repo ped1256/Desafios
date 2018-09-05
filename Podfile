@@ -8,4 +8,5 @@ target 'desafios' do
   # Pods for desafios
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end

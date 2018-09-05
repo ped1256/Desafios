@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var UID: String = ""
+
 struct User {
     let name: String
     let email:String

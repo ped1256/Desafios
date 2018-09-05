@@ -191,30 +191,22 @@ class FormViewController: UIViewController {
         
         let userForm = UserForm(name: name, email: email, password: password)
         
-        Authenticate.registerUser(user: userForm) { userData in
-            print(userData)
+        Authenticate().registerUser(user: userForm) { userData in
             let dashboardViewController = DashBoardViewController()
             dashboardViewController.user = userData
             dump((dashboardViewController.user))
             self.present(dashboardViewController, animated: true)
-            
         }
     }
 
     @objc func loginAction() {
+        guard let email = self.fieldEmailTextField.text, let password = self.fieldPasswordTextField.text else { return }
         
-        let userApp = User(name: "Pedro Emanuel", email: "ped1256@hotmail.com", avatar: nil, Challenges: nil, score: 1000, level: Level.low)
-        let dashboardViewController = DashBoardViewController()
-        dashboardViewController.user = userApp
-        self.present(dashboardViewController, animated: true)
-        
-//        guard let email = self.fieldEmailTextField.text, let password = self.fieldPasswordTextField.text else { return }
-//
-//        Authenticate.loginUser(email: email, password: password) { user in
-//            let userApp = User(name: user.name, email: user.email, avatar: nil, Challenges: nil, score: 1000)
-//            let dashboardViewController = DashBoardViewController()
-//            self.present(dashboardViewController, animated: true)
-//        }
+        Authenticate().loginUser(email: "teste01@gmail.com", password: "teste01") { user in
+            let dashboardViewController = DashBoardViewController()
+            dashboardViewController.user = user
+            self.present(dashboardViewController, animated: true)
+        }
     }
     
     @objc func dismissModal() {

@@ -46,6 +46,11 @@ class DashBoardViewController: UIViewController {
             infoView.topAnchor.constraint(equalTo: self.view.topAnchor),
             infoView.heightAnchor.constraint(equalToConstant: 200)
             ])
+        
+        if let user = self.user {
+            infoView.user = user
+        }
+
     }
     
     func addTitleView() {

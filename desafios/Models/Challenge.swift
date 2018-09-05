@@ -9,11 +9,10 @@
 import Foundation
 import UIKit
 
-class Challenge: NSObject {
-    
+struct Challenge {
     var challengeID: Int?
     var challengeName: String?
-    var challengeImage: UIImage?
+    var challengeImagePath: String?
     var challengeDificult: Difficulty?
     var challengetype: ChallengeType?
 }

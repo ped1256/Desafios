@@ -111,7 +111,10 @@ class UserInfoView: UIView {
     }
     
     func updateUI() {
-        
+        guard let user = self.user else { return }
+        scoreTitleLabel.text = "Pontos \(user.score ?? 0)"
+        nameLabel.text = user.name
+        imageView.image = user.avatar ?? #imageLiteral(resourceName: "userWithoutImage")
     }
     
 }

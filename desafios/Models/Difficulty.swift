@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum Difficulty {
+enum Difficulty: Int {
     case easy, normal, hard, extreme
     
     var description: String {

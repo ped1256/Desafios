@@ -21,6 +21,7 @@ class LoginOnboardingViewController: UIViewController {
         buildTitleLabel()
         buildLoginAndRegisterbutton()
         buildLoginFacebookButton()
+
     }
     
     func buildBackground() {
@@ -99,7 +100,7 @@ class LoginOnboardingViewController: UIViewController {
         formViewController.formType = .register
         formViewController.modalPresentationStyle = .overCurrentContext
         self.present(formViewController, animated: true, completion: nil)
-        
+//        Authenticate().registerUserInfoInDataBase()
     }
 
     // vou voltar pra arrumar esses códigos duplicados
@@ -109,6 +110,8 @@ class LoginOnboardingViewController: UIViewController {
         formViewController.modalPresentationStyle = .overCurrentContext
         self.present(formViewController, animated: true, completion: nil)
         
+        
+//        Authenticate().getUserInfoDataBase()
     }
     
 }

@@ -22,21 +22,10 @@ class CameraOnboardingViewController: UIViewController {
     
     func buildBackground(){
         self.navigationController?.navigationBar.isHidden = true
-        self.backgroundView = UIView(frame: self.view.frame)
-        guard let backgroundView = self.backgroundView else { return }
-        
-        let gradient = CAGradientLayer()
-        
-        gradient.frame = backgroundView.bounds
-        
-        let topColor = #colorLiteral(red: 0.1857930523, green: 0.4457156502, blue: 1, alpha: 1)
-        let bottomColor = #colorLiteral(red: 0.3337075006, green: 0.7861080266, blue: 0.1144733785, alpha: 1)
-        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
-        
-        backgroundView.layer.insertSublayer(gradient, at: 1)
-        backgroundView.frame = self.view.frame
-        self.view.addSubview(backgroundView)
-        
+        self.view.backgroundColor = .white
+        let backgroundViewWithAnimate = BackgroundViewWithAnimate(frame: self.view.frame)
+        self.backgroundView = backgroundViewWithAnimate
+        self.view.addSubview(backgroundViewWithAnimate)
     }
     
     func buildCameraImageView(){
@@ -57,7 +46,7 @@ class CameraOnboardingViewController: UIViewController {
         let messageLabel = UILabel()
         self.view.addSubview(messageLabel)
         messageLabel.text = "Você precisa usar a camera para identificar os elementos"
-        messageLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        messageLabel.textColor = #colorLiteral(red: 0.3098039216, green: 0.4156862745, blue: 0.5411764706, alpha: 1)
         messageLabel.textAlignment = .center
         messageLabel.font = UIFont.boldSystemFont(ofSize: 24)
         messageLabel.numberOfLines = 3
